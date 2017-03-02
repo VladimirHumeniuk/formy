@@ -1,3 +1,65 @@
+body {
+  padding: 25px 15% 0 15%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px; }
+  @media screen and (min-width: 1380px) {
+    body {
+      padding: 100px 20% 0 20%; } }
+  @media screen and (max-width: 1024px) {
+    body {
+      padding: 20px 10% 0 10%; } }
+
+h1 {
+  text-align: center;
+  margin-bottom: 80px; }
+  @media screen and (min-width: 1400px) {
+    h1 {
+      margin-bottom: 150px; } }
+  @media screen and (max-width: 1024px) {
+    h1 {
+      margin-bottom: 60px;
+      font-size: 1.8em; } }
+  h1 span {
+    color: #3498db; }
+  h1 span:not(:first-child) {
+    color: #f1c40f; }
+  h1 span:last-child {
+    color: #27ae60; }
+
+#ribbon {
+  color: transparent;
+  display: block;
+  height: 149px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  text-decoration: none solid transparent;
+  text-rendering: optimizelegibility;
+  top: 0px;
+  width: 149px;
+  z-index: 10;
+  -webkit-perspective-origin: 74.5px 74.5px;
+          perspective-origin: 74.5px 74.5px;
+  -webkit-transform-origin: 74.5px 74.5px;
+          transform-origin: 74.5px 74.5px;
+  background: transparent url(https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67) no-repeat scroll 0% 0%/auto padding-box border-box;
+  border: 0px none transparent;
+  font: normal normal normal 0px/0px a;
+  outline: transparent none 0px; }
+
+footer {
+  text-align: center;
+  margin-top: 70px; }
+  @media screen and (min-width: 1380px) {
+    footer {
+      margin-top: 150px; } }
+  footer a {
+    text-decoration: none;
+    color: #000; }
+    footer a svg {
+      margin-bottom: -5px;
+      margin-right: 5px; }
+
 #formy {
   font-weight: 600;
   color: #3A3A3A;
