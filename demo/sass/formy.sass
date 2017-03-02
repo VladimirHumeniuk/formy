@@ -1,0 +1,203 @@
+// Just few styles for demo, don't watch here and delete this if you download styles from demo version and not from reporsitory (how dare you...)
+body
+	padding: 25px 15% 0 15%
+	@media screen and (min-width: 1380px)
+		padding: 100px 20% 0 20%
+	@media screen and (max-width: 1024px)
+		padding: 20px 10% 0 10%
+	font-family: Arial, Helvetica, sans-serif
+	font-size: 18px
+
+h1
+	text-align: center
+	margin-bottom: 80px
+	@media screen and (min-width: 1400px)
+		margin-bottom: 150px
+	@media screen and (max-width: 1024px)
+		margin-bottom: 60px
+		font-size: 1.8em
+	span
+		color: #3498db
+	span:not(:first-child)
+		color: #f1c40f
+	span:last-child
+		color: #27ae60
+#ribbon
+	color: transparent
+	display: block
+	height: 149px
+	position: absolute
+	right: 0px
+	text-align: center
+	text-decoration: none solid transparent
+	text-rendering: optimizelegibility
+	top: 0px
+	width: 149px
+	z-index: 10
+	perspective-origin: 74.5px 74.5px
+	transform-origin: 74.5px 74.5px
+	background: transparent url(https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67) no-repeat scroll 0% 0%/auto padding-box border-box
+	border: 0px none transparent
+	font: normal normal normal 0px/0px a
+	outline: transparent none 0px
+
+footer
+	text-align: center
+	margin-top: 70px
+	@media screen and (min-width: 1380px)
+		margin-top: 150px
+	a
+		text-decoration: none
+		color: #000
+		svg
+			margin-bottom: -5px
+			margin-right: 5px
+// /Styles for demo is over
+
+// Formy styles here 
+// Colors mixins
+$color-palette-green: #1abc9c
+$color-palette-red: #e74c3c
+$color-palette-grey: #3A3A3A
+
+$good: $color-palette-green //when everything is fine
+$bad: $color-palette-red //when something is invalid
+$default: $color-palette-grey // default state
+// /Colors mixins
+#formy
+	font-weight: 600 
+	color: $default
+	line-height: 1.5
+	margin: 0 auto
+	@media screen and (max-width: 768px)
+		width: 75%
+	@media screen and (min-width: 769px)
+		width: 50%
+	@media screen and (max-width: 414px)
+		width: 100%
+	#result
+		width: 100%
+		height: 50px
+		border: 1px solid $good
+		text-align: center
+		line-height: 50px
+		color: $good
+		font-size: 1.2em
+		margin-bottom: 40px
+		position: relative
+		border-radius: 4px
+		display: none
+		svg
+			fill: $good
+			width: 20px
+			margin-right: 10px
+			position: relative
+			top: 2px
+		&.invalidRequest
+			border: 1px solid $bad
+			color: $bad
+			svg
+				fill: $bad
+	.input-field	
+		position: relative
+		margin-bottom: 40px
+		i
+			position: absolute
+			left: 0
+			top: 0
+			svg
+				width: 25px
+				fill: $default
+				transition: all .3s ease-in-out
+				&.active
+					fill: $good
+				&.invalid
+					fill: $bad
+		input
+			background: none
+			border: none
+			border-bottom: 1px solid $default
+			margin-left: 3.2em
+			width: calc(100% - 3.2em)
+			position: relative
+			outline: none
+			line-height: 2.4em
+			@supports (caret-color:darken($default, 5%))
+				darken($default, 25%)
+			&:focus
+				border-color: $good
+				box-shadow: 0 1px 0 0 $good
+			&.invalid
+				border-color: $bad
+				box-shadow: 0 1px 0 0 $bad
+		textarea
+			border: none
+			border-bottom: 1px solid $default
+			margin-left: 3.2em
+			width: calc(100% - 3.2em)
+			outline: none
+			resize: none
+			overflow: hidden
+			box-sizing: border-box
+			resize: none
+			line-height: normal
+			padding-top: 15px
+			font-family: inherit
+			@supports (caret-color:darken($default, 5%))
+				darken($default, 25%)
+			&:focus
+				border-color: $good
+				box-shadow: 0 1px 0 0 $good	
+		.lenghtCounter
+			position: absolute
+			right: 0
+			top: 0
+			font-weight: 400
+			display: none
+			span
+				font-size: 0.8em
+		label 
+			position: absolute
+			top: 0
+			margin-left: 2.35em
+			width: calc(100% - 2.35em) 
+			transition: all .3s ease-in-out
+			cursor: text
+			&.active
+				top: -17px
+				font-size: calc(100% - 2px)
+				margin-left: 2.65em
+				color: $good
+			&.invalid
+				color: $bad
+			&.filled:not(.active)
+				font-size: calc(100% - 2px)
+				margin-left: 2.65em
+				top: -17px
+	.submit
+		width: 120px
+		height: 45px
+		background-color: #fff
+		border: 1px solid $good
+		margin-left: 3.2em
+		border-radius: 4px
+		cursor: pointer
+		font-weight: 600
+		transition: all .3s ease-in-out
+		color: $default
+		text-align: left
+		padding-left: 20px
+		position: relative
+		&:hover
+			background-color: $good
+			color: #fff
+			svg
+				fill: #fff
+		svg
+			fill: $good
+			width: 20px
+			position: absolute
+			right: 15px
+			top: 11px
+			transition: all .3s ease-in-out
+// /Formy styles over
