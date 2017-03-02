@@ -4,7 +4,7 @@
 </p>
 Formy - its responsive and friendly contact form on html/sass/jquery/php and svg icons.
 
-You can write me some emails with this form:  <a href="https://vladimirhumeniuk.github.io/formy">![Demo](https://img.shields.io/badge/watch-demo-green.svg)</a>
+You can write me some emails with this form:  <a href="https://formy.vhumeniuk.com/">![Demo](https://img.shields.io/badge/watch-demo-green.svg)</a>
 
 ## How to use
 Firsf of all, download and embed to your project styles and scripts:
