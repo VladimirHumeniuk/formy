@@ -160,7 +160,11 @@ footer {
       width: calc(100% - 2.35em);
       -webkit-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out;
-      cursor: text; }
+      cursor: text;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
       #formy .input-field label.active {
         top: -17px;
         font-size: calc(100% - 2px);
