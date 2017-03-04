@@ -93,8 +93,11 @@ $(document).ready(function () {
     $(phoneField).keydown(function (e) {
         var key = e.charCode || e.keyCode || 0;
             $phone = $(this);
+            char = $phone.val().charAt(1);
 
-		if (key !== 8 && key !== 9) {
+		if (key !== 8 && key !== 9 && char !== "3") {
+            $phone.attr("maxlength", "18");
+            
             if ($phone.val().length === 0) {
 				$phone.val($phone.val() + '+');
 			}
@@ -111,6 +114,27 @@ $(document).ready(function () {
 				$phone.val($phone.val() + '-');
 			}
 		}
+
+        if (key !== 8 && key !== 9 && char == "3") {
+            $phone.attr("maxlength", "19");
+
+            if ($phone.val().length === 0) {
+				$phone.val($phone.val() + '+');
+			}
+            if ($phone.val().length === 3) {
+				$phone.val($phone.val() + ' ' + '(');
+			}
+			if ($phone.val().length === 8) {
+				$phone.val($phone.val() + ')'+ ' ');
+			}		
+			if ($phone.val().length === 13) {
+				$phone.val($phone.val() + '-');
+			}
+			if ($phone.val().length === 16) {
+				$phone.val($phone.val() + '-');
+			}
+		}
+
         return (key == 8 || 
 				key == 9 ||
 				key == 46 ||
@@ -120,18 +144,13 @@ $(document).ready(function () {
 });
 
 // Here we count symbols in input fields
-$('input').keyup(function () {
+$(document).delegate('input', 'keyup', function() {
     var field = $(this),
         counter = $(this).parent().find(".lenghtCounter span");
 
     field.bind('keydown', function () {
         setTimeout(function () {
-            if ($(phoneField).is(":focus")) {
-                counter.text(field.val().replace(/[^\d]/g,'').length + "/11")
-            } else {
-                counter.text(field.val().replace(/[^\d]/g,'').length + "/" + field.attr("maxlength"))
-            }
-        }, 4);
+                counter.text(field.val().length + "/" + field.attr("maxlength")) }, 4);
         if ($(this).val().length == $(this).attr("maxlength")) {
             counter.css("color", "#3498db");
         } else {
