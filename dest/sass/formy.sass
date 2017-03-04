@@ -1,4 +1,3 @@
-// Just few styles for demo, don't watch here and delete this if you download styles from demo version and not from reporsitory (how dare you...)
 // Formy styles here 
 // Colors mixins
 $color-palette-green: #1abc9c
@@ -63,7 +62,8 @@ $default: $color-palette-grey // default state
 			border: none
 			border-bottom: 1px solid $default
 			margin-left: 3.2em
-			width: calc(100% - 3.2em)
+			width: calc((100% - 3.2em) - 50px)
+			padding-right: 50px
 			position: relative
 			outline: none
 			line-height: 2.4em
@@ -109,7 +109,7 @@ $default: $color-palette-grey // default state
 			width: calc(100% - 2.35em) 
 			transition: all .3s ease-in-out
 			cursor: text
-			user-select: none
+			user-sect: none
 			&.active
 				top: -17px
 				font-size: calc(100% - 2px)
