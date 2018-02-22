@@ -104,7 +104,3 @@ in the next version i will add some checkboxes, select lists and radio buttons.
 
 ### SVG Icons
 In Formy i use svg icons Entypo by awesome Daniel Bruce. You can download whole pack from site [Entypo Icons](http://www.entypo.com/).
-
-###Outro
-Formy maded with love to ["Love FrontEnd" community](https://vk.com/love_frontend).
-If you like it - fork me, and also check my [Curtains buttons](https://github.com/VladimirHumeniuk/curtains-buttons).
